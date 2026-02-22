@@ -223,7 +223,7 @@ class OCPP2WProxy:
                 # Note! We do not forward CallResults or CallErrors from the secondary server
                 # These are silently ignored.
         except Exception as e:
-            logger.error(f"{self.charger_id} Error in receive_primary_messages: {e}")
+            logger.error(f"{self.charger_id} Error in receive_secondary_messages: {e}")
 
     async def watchdog(self):
         """Watch time vs. timestamp updated by receiving messages from charger."""
